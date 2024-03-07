@@ -8,7 +8,7 @@ def get_url():
     request = requests.get(url)
     content = request.json()    
     articles = content["articles"][:20]
-    # List of tuples containing URL and title
+    # List of tuples containing URL and titlev  
     body = [(article["url"], article["title"], article["author"]) for article in articles]
     return body
 
